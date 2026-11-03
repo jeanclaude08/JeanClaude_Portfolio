@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página do Jean-Claude</title>
+    <link rel="icon" type="image/png" href="img/mocha_house.png">
+
+    <!-- Fonte Xmind - Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Xmind:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- Fonte Xmind - Google Fonts -->
+
+    <!-- CSS Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- .CSS Bootstrap -->
+
+    <!-- Icons Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- .Icons Bootstrap -->
+
+    <!-- CSS Custom -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- .CSS Custom -->
+</head>
+
+<!-- Para a barra de navegacao destacar o link correto tanto ao fazer scroll como ao clicar, usei o Scrollspy.
+data-bs-spy="scroll" -> vigia a posicao da pagina
+data-bs-target="#mainMenu" diz à navbar qual o link a destacar conforme a section visível
+smooth-scroll -> faz uma transição suave entre as sections 
+Conseguimos fazer isto, graças ao JavaScript, que importamos do ficheiro bootstrap.bundle.min.js-->
+
+<body class="text-white" data-bs-spy="scroll" data-bs-target="#mainMenu" data-bs-smooth-scroll="true">
+    <div class="container-fluid">
+        <!-- Cabeçalho de navegação -->
+        <!-- fixed-top -> faz a barra ficar afixada em cima e não desaparecer ao dar scroll -->
+        <nav id="mainMenu" class="navbar navbar-expand-lg fixed-top" data-bs-theme="dark">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link" aria-current="page" href="#whoami">Quem Sou</a>
+                        <a class="nav-link" aria-current="page" href="#skills">Skills</a>
+                        <a class="nav-link" href="#projects">Projetos</a>
+                        <a class="nav-link" href="#contact">Contacto</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- .Cabeçalho de navegação -->
+        <main>
+            <!-- Secção: Apresentação -->
+            <section id="whoami" class="container text-center mt-3">
+                <h1 id="portfolio">Portfolio Jean-Claude</h1>
+                <h2 class="mt-5"><i><u>Sobre mim</u></i></h2>
+                <div>
+                    <h3 class="text-start mt-5"><u>Quem sou eu:</u></h3>
+                    <p>Sou uma pessoa curiosa, persistente e apaixonada por tecnologia. Gosto de aprender, experimentar
+                        e
+                        criar os meus próprios projetos, especialmente na área do desenvolvimento web.</p>
+                    <p>No meu tempo livre, a minha grande paixão são os videojogos, onde aproveito para descontrair,
+                        explorar novos mundos e partilhar bons momentos a jogar online com os meus amigos.
+                    </p>
+                </div>
+
+                <!-- Links -->
+                <div class="mt-5">
+                    <!-- fs (Font Size) - tamanho da fonte, vai de fs-1 até fs-2 (fs1 = ~40px, fs-2 = ~32px, fs-3 = ~28px, fs-3 = ~24px, fs-5 = ~20px, fs-6 = ~16px,)  -->
+                    <h3 class="text-start mt-5"><u>Links:</u></h3>
+                    <div class="container text-center">
+                        <!-- CV -->
+                        <div class="row">
+                            <div class="col">
+                                <!-- ms-2 - margin start, da espacamento no inicio, permitindo o icone nao ficar colado ao texto -->
+                                <!-- aria-label - para acessibilidade, para utilizadores que usem o leitor de ecrã -->
+                                <a href="https://drive.google.com/file/d/1O97RyOEwiH8EEWD6YE4J-yDKViId-46j/view"
+                                    target="_blank" class="links d-inline-flex align-items-center"
+                                    aria-label="Ver Currículo/CV"><i
+                                        class="bi bi-file-earmark-person-fill fs-1"></i><span
+                                        class="fw-bold ms-2">CV</span></a>
+                            </div>
+
+                            <!-- GitHub -->
+                            <div class="col">
+                                <a href="https://github.com/jeanclaude08" target="_blank"
+                                    class="links d-inline-flex align-items-center" aria-label="Perfil do GitHub"><i
+                                        class="bi bi-github fs-1"></i><span class="fw-bold ms-2">GitHub</span></a>
+                            </div>
+
+                            <!-- LinkedIn -->
+                            <div class="col">
+                                <a href="https://www.linkedin.com/in/jeanclaude0808/" target="_blank"
+                                    class="links d-inline-flex align-items-center" aria-label="Perfil do LinkedIn"><i
+                                        class="bi bi-linkedin fs-1"></i><span class="fw-bold ms-2">LinkedIn</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- .Links -->
+
+                <!-- Imagem que me represente -->
+                <!-- d-block: força a imagme a comportar-se como um elemento de bloco // mx-auto: aplica margem esquerda e direita automáticas, centrando a imagem na página ou elemento onde está inserida. -->
+                <img id="img" class="img-fluid d-block mx-auto mt-5" src="img/img1.jpg"
+                    alt="Gosto de jogar videojogos. Gerado pelo Gemini AI a 14.09.26" width="800" height="400">
+                <br><br>
+            </section>
+            <!-- .Secção: Apresentação -->
+
+            <!-- Secção: Skills -->
+            <section id="skills" class="container text-center mt-3">
+                <h2><i><u>Linguagens & Ferramentas</u></i></h2>
+                <div>
+                    <h3 class="text-start mt-5"><u>Skills:</u></h3>
+                </div>
+                <br><br>
+
+                <div class="row row-cols-1 row-cols-md-2 g-4">
+                    <div class="col">
+                        <div class="card p-3 h-100">
+                            <img src="img/html5-logo.webp" class="card-img-top mx-auto"
+                                style="height: 150px; object-fit: contain;" alt="HTML">
+                            <div class="card-body">
+                                <h5 class="card-title">HTML</h5>
+                                <p class="card-text"><strong>HTML</strong> é uma linguagem de marcação utilizada na
+                                    construção de páginas na Web. Documentos <strong>HTML</strong> podem ser
+                                    interpretados por navegadores. A tecnologia é fruto da junção entre padrões
+                                    <i>HyTime</i> e <i>SGML</i>.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card p-3 h-100">
+                            <img src="img/css3-logo.webp" class="card-img-top mx-auto"
+                                style="height: 150px; object-fit: contain;" alt="CSS">
+                            <div class="card-body">
+                                <h5 class="card-title">CSS</h5>
+                                <p class="card-text"><i>Cascading Style Sheets</i> é um mecanismo para adicionar estilos
+                                    a uma página <i>Web</i>, aplicando diretamente nas <i>tags HTML</i> ou ficar contido
+                                    dentro das <i>tags style</i>. Também é possível, adicionar estilos adicionando um
+                                    <i>link</i> para um ficheiro <strong>CSS</strong> que contém os estilos. Assim,
+                                    quando se quiser alterar a aparência dos documentos vinculados a este ficheiro
+                                    <strong>CSS</strong>, basta modificá-lo
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card p-3 h-100">
+                            <img src="img/bootstrap-logo.webp" class="card-img-top mx-auto"
+                                style="height: 150px; object-fit: contain;" alt="Bootstrap">
+                            <div class="card-body">
+                                <h5 class="card-title">Bootstrap</h5>
+                                <p class="card-text"><strong>Bootstrap</strong> é um <i>framework web</i> com
+                                    código-fonte aberto, para desenvolvimento de componentes de <i>interface</i> e
+                                    <i>front-end</i> para <i>sites</i> e aplicações <i>web</i>, usando <i>HTML</i>,
+                                    <i>CSS</i> e <i>JavaScript</i>, baseado em modelos de <i>design</i> para uma
+                                    tipografia, melhorando a experiência do utilizador num <i>site</i> amigável e
+                                    responsivo.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card p-3 h-100">
+                            <img src="img/github-logo.webp" class="card-img-top mx-auto"
+                                style="height: 150px; object-fit: contain;" alt="GitHub">
+                            <div class="card-body">
+                                <h5 class="card-title">Github</h5>
+                                <p class="card-text"><strong>GitHub</strong> é uma plataforma de hospedagem de código
+                                    fonte e ficheiros de controlo de versão usando o <i>Git</i>. Permite que
+                                    programadores contribuam em projetos privados e/ou código aberto de qualquer lugar
+                                    do mundo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- .Secção: Skills -->
+
+            <!-- Secção: Projetos (cards) -->
+            <section id="projects" class="container text-center">
+                <h2 class="mt-5"><i><u>Projetos</u></i></h2>
+                <div class="row row-cols-1 row-cols-md-3 g-4 mt-2">
+                    <div class="col">
+                        <div class="card h-100 overflow-hidden">
+                            <img src="img/proj-1.png" class="card-img-top" alt="Projeto Stockly" style="height: 200px;">
+                            <!-- d-flex e flex-column ativam o alinhamento flexível na vertical. 
+                            mt-auto absorve o espaço vazio e "prende" o botão no fundo -->
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Stockly - Gestão de Inventário</h5>
+                                <p class="card-text">Stockly - Sistema de Gestão de Inventário é uma aplicação
+                                    desenvolvida com o objetivo de facilitar a gestão de produtos em armazém ou loja.
+                                    Este sistema permitirá aos utilizadores adicionar, editar, remover e consultar
+                                    informações sobre produtos.</p>
+                                <a href="https://github.com/ELRic122/Stockly-10790Python" target="_blank"
+                                    class="btn btnProjeto btn-sm mt-auto">Ver Detalhes</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 overflow-hidden">
+                            <img src="img/proj-2.jpg" class="card-img-top"
+                                alt="Projeto PAP - Jogo - Slenderman's Haunted Asylum"
+                                style="height: 200px; object-fit: cover;">
+                            <div class="card-body  d-flex flex-column">
+                                <h5 class="card-title"> Projeto PAP - Jogo - Slenderman's Haunted Asylum</h5>
+                                <p class="card-text">Jogo "trash" desenvolvido no âmbito da Prova de Aptidão
+                                    Profissional (PAP). Linguagens utilizadas: C# (C-Sharp)</p>
+                                <a href="https://jean-claude08.itch.io/slendermans-haunted-asylum" target="_blank"
+                                    class="btn btnProjeto btn-sm mt-auto">Ver Detalhes</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 overflow-hidden">
+                            <img src="img/proj-3.png" class="card-img-top" alt="O meu portfólio"
+                                style="height: 200px; object-fit: cover;">
+                            <div class="card-body  d-flex flex-column">
+                                <h5 class="card-title">Portfólio Web Pessoal</h5>
+                                <p class="card-text">Website responsivo moderno desenvolvido de raíz com HTML5, CSS3 e
+                                    Bootstrap 5, com tema escuro personalizado, animações suaves e adaptação para
+                                    mobile.</p>
+                                <a href="#" class="btn btnProjeto btn-sm mt-auto">Ver Detalhes</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- .Secção: Projetos (cards) -->
+
+            <!-- Contacto c/Formulário -->
+            <!-- required garante que o formulário não será submetido sem o input do utilizador em: nome, email e contacto.-->
+            <section id="contact" class="container mt-5">
+                <h2 class="text-center"><i><u>Contacto</u></i></h2>
+                <form class="mt-5" action="page/success.html">
+                    <div class="mb-3 text-start">
+                        <label for="nome" class="form-label">Nome</label>
+                        <div>
+                            <input type="text" class="form-control" id="nome" required>
+                        </div>
+                    </div>
+                    <div class="mb-3 text-start">
+                        <label for="email" class="form-label">Email</label>
+                        <div>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                    </div>
+                    <div class="mb-3 text-start">
+                        <label for="number" class="form-label">Contacto Telefónico</label>
+                        <div>
+                            <input type="tel" class="form-control" id="number" required>
+                        </div>
+                    </div>
+                    <!-- required (checklist) garante que o formulário não será submetido uma opção selecionada. -->
+                    <fieldset class="row mb-3 mt-5">
+                        <legend class="col-form-label col-sm-2 pt-0"></legend>
+                        <div class="col-sm-10">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1"
+                                    value="option1" required>
+                                <label class="form-check-label" for="gridRadios1">
+                                    Dúvida
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2"
+                                    value="option2" required>
+                                <label class="form-check-label" for="gridRadios2">
+                                    Sugestão
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3"
+                                    value="option3" required>
+                                <label class="form-check-label" for="gridRadios3">
+                                    Outro
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <button id="submit" type="submit" class="btn mt-5">ENVIAR</button>
+                    <button id="reset" type="reset" class="btn mt-5"><i>Redefinir Formulário</i></button>
+                </form>
+            </section>
+            <!-- .Formulários -->
+
+            <!-- JS Bootstrap -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+                crossorigin="anonymous"></script>
+            <!-- .JS Bootstrap -->
+
+            <!-- Voltar ao Início -->
+            <a id="up" href="#" aria-label="Voltar ao inicio da página"><i
+                    class="bi bi-arrow-up-circle-fill fs-1"></i></a>
+            <!-- .Voltar ao Início -->
+        </main>
+    </div>
+
+    <!-- RODAPÉ -->
+    <!-- py: p = padding; y = classes para top e bottom // mt: m = margin; t = classes para margin-top ou padding-top -->
+    <footer id="rodape" class="py-2 mt-5">
+        <div class="container text-light text-center">
+            <p class="display-5 mb-3">Portfolio Jean-Claude</p>
+            <small class="text-white-50">&copy; Copyright by Jean-Claude. Todos os direitos reservados.</small>
+            <!-- Vídeo de YouTube que assisti para fazer o footer -> https://www.youtube.com/watch?v=4UT2r2MAJKY (Youtube: Bootstrap 5 Footer - ByteGrad) -->
+        </div>
+    </footer>
+    <!-- .RODAPÉ -->
+</body>
+
+</html>

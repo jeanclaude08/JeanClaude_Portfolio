@@ -1,0 +1,231 @@
+/* O corpo do documento fica com a fonte, tamanho, peso, cor de fundo e cor definidos */
+body {
+    padding-top: 100px;
+    font-family: Xmind, sans-serif; /* Fonte do Google Fonts*/
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #1e1e2e;
+    color: #bac2de;
+}
+
+/* Os "H1" e "H2" ficam com esta cor */
+h1, h2 {
+    color: #cba6f7;
+    text-align: center;
+}
+
+/* Os "H3" ficam centrados e com esta cor */
+h3 {
+    text-align: center;
+    color: #eba0ac
+}
+
+/* Links da página ficam com esta cor*/
+a {
+    color: #f5c2e7;
+    text-decoration: none;
+}
+/* Navbar */
+/* o !important garante que o CSS personalizado suba na hierarquia, pra ficar a frente do padrao do bootstrap */
+/* BARRA NAVEGAÇÃO { */
+.navbar {
+    background-color: #11111b !important;
+}
+.navbar .nav-link {
+    color: #cba6f7 !important;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    background-color: #f5c2e7 !important;
+    color: #1e1e2e !important;
+}
+
+.navbar .nav-link.active {
+    color: #ffffff !important;
+}
+/* .BARRA NAVEGAÇÃO */
+
+/* IMAGEM */
+/* Centra a imagem e cria a borda arredondada*/
+#whoami img,
+#success {
+    display: block; /* para centrar */
+    margin-left: auto; /* centrar horizontal esquerda */
+    margin-right: auto; /* centrar horizontal direita */
+    border-radius: 20px;
+    border: solid;
+    border-color: #cba6f7;
+    max-width: 100%; /* para nao desformatar em telemoveis */
+    height: auto;
+}
+/* .IMAGEM */
+
+/* LINKS */
+.links {
+    font-size: large;
+    font-weight: bold;
+    color: #cba6f7;
+}
+
+.links:hover {
+    color: #f5c2e7;
+    transition: all 0.3s ease;
+}
+/* .LINKS */
+
+/* SKILLS */
+.card {
+    border-radius: 20px;
+    background-color: #313244;
+    color: #bac2de;
+    border: 2px solid #cba6f7;
+}
+/* .SKILLS */
+
+/* PROJETOS */
+#projects .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* transform 0.3s ease - anima o movimento do cartao, o (ease) faz a animacao comecar devagar, acelerar no meio e abrandar no fim. box-shadow 0.3s ease - anima o aparecimento e o crescimento da sombra.  */
+}
+
+#projects .card .card-title {
+    color: #eba0ac;
+    font-weight: bold;
+}
+
+#projects .card:hover {
+    transform: translateY(-8px); /* translateY - move para cima (eixo Y). -8px - move o elemento para cima*/
+    box-shadow: 0 10px 20px rgba(203, 166, 247, 0.3); /* 0 - deslocamento horizontal da sombra. 10px - empurra a sombra 10px pra baixo. 20px - blur da sombra, quanto maior o numero, mais suave e espalhada a sombra fica. rgba - cor roxa, com 30% de opacidade (0.3). */
+} 
+
+.btnProjeto {
+    background-color: #eba0ac;
+    color: black;
+    border: 2px solid #cba6f7;
+    border-radius: 20px;
+    font-size: large;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btnProjeto:hover {
+    background-color: #cba6f7;
+    color: black;
+    border: 2px solid #eba0ac;
+}
+/* .PROJETOS */
+
+/* FORMULARIO */
+/* Centra o formulario e adiciona uma borda arredondada.*/
+form {
+    background-color: #313244;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #cba6f7;
+    border-radius: 20px;
+}
+
+.col-form-label {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: larger;
+}
+
+#nome, #email, #number {
+    background-color: #181825;
+    color: white;
+    border: 1px solid #cba6f7;
+    border-radius: 20px;
+}
+
+#submit{
+    background-color: #eba0ac;
+    color: black;
+    border: 1px solid white;
+    border-radius: 20px;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+#submit:hover{
+    background-color: #cba6f7;
+    color: black;
+    border: 1px solid #eba0ac;
+    transition: all 0.3s ease;
+}
+
+#reset {
+    text-transform: uppercase;
+    background-color: red;
+    color: white;
+    border: 1px solid white;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: larger;
+}
+
+#reset:hover{
+    background-color: rgb(201, 8, 8);
+    color: white;
+    transition: all 0.3s ease;
+}
+/* .FORMULARIO */
+
+/* VOLTAR AO INICIO */
+#up{
+    position: fixed; /* ficar preso na página */
+    bottom: 20px; /* Distância do fundo da página, fica a 20px */
+    right: 20px; /* Distância da margem à direita que tmb fica a 20px. Se fosse left: 20px, ficaria na esquerda */
+    color: #cba6f7;
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+#up:hover{
+    color: #f5c2e7;
+}
+/* .VOLTAR AO INICIO */
+
+/* media para mobile */
+@media (min-width: 200px) and (max-width: 850px) {
+    #img {
+        display: block;
+        width: 90%; /* Num ecrã pequeno, a imagem vai para 90% do ecrã e fica sem cortar nada*/
+        max-width: 400px; /* Num tablet, a imagem vai até aos 400px e não passa disso*/
+        height: auto; /* Manter a proporção, para não desconfigurar a imagem*/
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+/* .media para mobile */
+
+/* Adicona emojis antes dos titulos */
+
+#portfolio::before {
+    content: "🙂 ";
+}
+
+#whoami h2::before {
+    content: "👤 ";
+}
+
+#skills h2::before {
+    content: "🛠️ ";
+}
+
+#projects h2::before {
+    content: "💼 ";
+}
+
+#contact h2::before {
+    content: "✉️ ";
+}
+/* .Adicona emojis antes dos titulos */
+
+#rodape {
+    background-color: #11111b;
+}
